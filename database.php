@@ -1,0 +1,7 @@
+<?php
+
+$veiculos = [];
+
+$clientes = [];
+
+$contratos = [];
