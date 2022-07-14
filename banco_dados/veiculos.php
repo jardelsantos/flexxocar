@@ -1,18 +1,5 @@
 <?php
-
-$link = '';
-
-function conexao(){
-    global $link;
-
-    $servidor = '127.0.0.1';
-    $usuario = 'root';
-    $senha = '';
-    $banco_de_dados = 'flexxocar';
-
-    $link = mysqli_connect($servidor, $usuario, $senha, $banco_de_dados);
-}
-
+s
 function inserir($placa, $marca, $modelo, $preco){
     global $link;
     if( mysqli_query($link,"INSERT INTO veiculos (placa, marca,modelo,preco) VALUES ('$placa','$marca','$modelo','$preco')") ){
