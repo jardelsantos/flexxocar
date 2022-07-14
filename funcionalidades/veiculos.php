@@ -55,7 +55,8 @@ function novo_veiculo(){
 function listar_veiculo(){
     //global $veiculos;
 
-    $veiculos = lerArquivoVeiculos();
+    //$veiculos = lerArquivoVeiculos();
+    $veiculos = selecionarTudo();
 
     if($veiculos){
 
