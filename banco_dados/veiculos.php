@@ -1,5 +1,5 @@
 <?php
-s
+
 function inserir($placa, $marca, $modelo, $preco){
     global $link;
     if( mysqli_query($link,"INSERT INTO veiculos (placa, marca,modelo,preco) VALUES ('$placa','$marca','$modelo','$preco')") ){
