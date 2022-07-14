@@ -9,7 +9,7 @@ $contratos = [];
 $link = '';
 
 function conexao(){
-    global $link;
+    global $link, $config;
     $link = mysqli_connect(
         $config['database']['servidor'], 
         $config['database']['usuario'], 
