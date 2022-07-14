@@ -1,0 +1,130 @@
+INSERIR UM REGISTRO
+ATUALIZAR UM REGISTRO
+APAGAR UM REGISTRO
+PESQUISAR POR UM REGISTRO
+LISTAR TODOS OS REGISTROS
+
+
+"MENSAGEM"   ----> BANCO DE DADOS
+
+CONJUNTO DE DADOS == TABELA DE DADOS
+
+
+CRIAR A ESTRUTURA DA TABELA DE DADOS
+
+NOME PARA A TABELA = clientes
+
+DADOS QUE SEREM ARMAZENADOS = COLUNA DE DADO
+
+cpf
+nome 
+
+NOMES DE COLUNA NÃO ACEITAM ESPAÇOS
+data_nascimento   dataNascimento
+
+
+///CREATE TABLE 
+
+create table clientes
+(
+    cpf,
+    nome,
+    data_nascimento
+)
+
+DEFINIÇÃO DOS TIPOS DE DADOS
+
+
+create table clientes
+(
+    cpf int(11),
+    nome char(50),
+    data_nascimento date
+)
+
+----------------------------------------
+cpf         | nome       |data_nascimento
+----------------------------------------
+006258963-21| jardel     |01/01/0000
+
+
+O conjunto de dados armazenados na linha representa um REGISTRO
+
+INSERIR UM REGISTRO
+
+"INSERT INTO clientes (cpf, nome, data_nascimento) 
+            VALUES ( 0515498499189, 'adalberto santos', '2022-01-01');"
+
+
+
+----------------------------------------
+cpf         | nome              |data_nascimento
+----------------------------------------
+006258963-21| jardel            |01/01/0000
+----------------------------------------
+051549849918| adalberto santos  |2022-01-01
+
+
+
+LISTAR TODOS OS REGISTROS
+
+"SELECT * FROM clientes;"
+
+----------------------------------------
+cpf         | nome              |data_nascimento
+----------------------------------------
+006258963-21| jardel            |01/01/0000
+----------------------------------------
+051549849918| adalberto santos  |2022-01-01
+
+
+"SELECT cpf,nome FROM clientes"
+
+--------------------------------
+cpf         | nome              
+--------------------------------
+006258963-21| jardel            
+--------------------------------
+051549849918| adalberto santos  
+
+
+PESQUISAR POR UM REGISTRO
+
+CLAUSULA "WHERE"
+
+"SELECT * FROM clientes WHERE cpf = 051549849918;"
+
+
+----------------------------------------
+cpf         | nome              |data_nascimento
+----------------------------------------
+051549849918| adalberto santos  |2022-01-01
+
+
+
+"SELECT * FROM clientes 
+    WHERE 
+        cpf = 051549849918 
+        and 
+        data_nascimento = '2022-01-02';"
+
+----------------------------------------
+cpf         | nome              |data_nascimento
+----------------------------------------
+0 linhas encontradas
+----------------------------------------
+
+
+ATUALIZAR UM REGISTRO
+
+'UPDATE INTO clientes SET nome = 'arlindo' WHERE cpf = '006258963-21';"
+
+
+
+APAGAR UM REGISTRO
+
+DELETE FROM clientes WHERE cpf = '006258963-21';"
+
+
+
+

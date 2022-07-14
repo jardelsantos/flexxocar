@@ -42,7 +42,8 @@ function novo_veiculo(){
     $novo['preco'] = readline();
 
     //$veiculos[] = $novo;
-    $resultado = registraNoArquivoVeiculos($novo);
+    //$resultado = registraNoArquivoVeiculos($novo);
+    $resultado = inserir($novo['placa'], $novo['marca'], $novo['modelo'], $novo['preco']);
     if($resultado){
         echo "\n\n Veículo cadastrado!. \n\n";
     }else{
