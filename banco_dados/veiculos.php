@@ -23,23 +23,18 @@ function selecionarTudo(){
 function pesquisar($identificador){
     global $link;
     $resultado = mysqli_query($link,"SELECT * FROM veiculos WHERE identificador = '$identificador'");
-    $dados = [];
-    while( $linha = mysqli_fetch_assoc($resultado)){
-        $dados[] = $linha;
-    }
-    
-    return $dados;
+    return mysqli_fetch_assoc($resultado);
 }
-function atualizar($identificador, $placa, $marca, $modelo, $preco){
+function atualizar($identificador, $veiculo){
     global $link;
     $resultado = mysqli_query($link,
         "
         UPDATE veiculos 
         SET
-            placa = '$placa',
-            marca = '$marca', 
-            modelo = '$modelo', 
-            preco = '$preco'
+            placa = '{$veiculo['placa']}',
+            marca = '{$veiculo['marca']}', 
+            modelo = '{$veiculo['modelo']}', 
+            preco = '{$veiculo['preco']}'
         WHERE 
             identificador = '$identificador'
         "
